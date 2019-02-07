@@ -24,8 +24,8 @@ app.use(bodyParser.json());
 app.use(require('cors')());
 
 // routes
-app.use('/api', authRoutes);
-app.use('/api', orderRoutes);
+app.use('/api/auth', authRoutes);
+app.use('/api/order', orderRoutes);
 app.use('/api/analytics', analyticsRoutes);
 app.use('/api/position', positionRoutes);
 app.use('/api/category', categoryRoutes);

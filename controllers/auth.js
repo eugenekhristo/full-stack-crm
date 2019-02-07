@@ -1,14 +1,15 @@
+const User = require('../models/User');
+
 module.exports.login = (req, res) => {
-  res.status(200).json({
-    login: {
-      email: req.body.email,
-      password: req.body.password
-    } 
-  });
+
 };
 
 module.exports.register = (req, res) => {
-  res.status(200).json({
-    message: 'Hello from register!  🙏️'
-  });
+  const candidate = User.findOne({emal: req.body.email});
+
+  if (candidate) {
+    res.status(409).json({
+      message: 'Пользователь с таким email уже существует!'
+    });
+  }
 };
