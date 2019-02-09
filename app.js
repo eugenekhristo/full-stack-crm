@@ -32,7 +32,7 @@ app.use('/api/category', categoryRoutes);
 
 // default route
 app.get('/', (req, res) => {
-  res.status(200).json({
+  res.status(404).json({
     message: 'Nice to see you! 😻'
   });
 });
