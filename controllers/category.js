@@ -1,5 +1,7 @@
 module.exports.getAll = (req, res) => {
-
+  res.json({
+    'message': `WOW! This is from categories with 💖`
+  });
 };
 
 module.exports.getById = (req, res) => {
