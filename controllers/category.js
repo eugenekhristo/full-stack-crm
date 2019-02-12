@@ -1,7 +1,10 @@
+// models
+const Category = require('../models/Category');
+// utils
+const errorhandler = require('../utils/errorHandler');
+
 module.exports.getAll = (req, res) => {
-  res.json({
-    'message': `WOW! This is from categories with 💖`
-  });
+  // const 
 };
 
 module.exports.getById = (req, res) => {

@@ -8,3 +8,7 @@ router.patch('/:id', controller.update);
 router.delete('/:id', controller.remove);
 
 module.exports = router;
+
+// router.get('/:categoryId', (req, res) => {
+//   req.para
+// });

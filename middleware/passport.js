@@ -16,6 +16,7 @@ module.exports = passport => {
       try {
         const user = await User.findById(payload.userId).select('email id');
         if (user) {
+          // this user will be added in req object by passport - so we will be able to grab it
           done(null, user);
         } else {
           done(null, false);
