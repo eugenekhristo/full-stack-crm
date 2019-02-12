@@ -4,6 +4,8 @@ const jwt = require("jsonwebtoken");
 const User = require('../models/User');
 // config
 const keys = require('../config/keys');
+// utils
+const errorHandler = require('../utils/errorHandler');
 
 module.exports.login = async (req, res) => {
   const foundUser = await User.findOne({email: req.body.email});
@@ -50,7 +52,7 @@ module.exports.register = async (req, res) => {
       await user.save();
       res.status(201).json(user);
     } catch (error) {
-      console.log(error);
+      errorHandler(res, error);
     }
   }
 };
