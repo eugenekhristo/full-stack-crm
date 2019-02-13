@@ -33,7 +33,7 @@ module.exports.create = async (req, res) => {
 
 module.exports.update = async (req, res) => {
   try {
-    // if not specify {new: true} - it will return old value
+    // if not provide {new: true} - it will return old value
     const position = await Position.findOneAndUpdate(
       {
         _id: req.params.id
